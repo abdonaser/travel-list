@@ -9,6 +9,8 @@ function Form({ onAddItems }) {
     if (!description) return;
     const newItem = { description, quantity, packed: false, id: Date.now() };
     onAddItems(newItem);
+    setDescription("");
+    setQuantity(1);
   };
 
   return (
