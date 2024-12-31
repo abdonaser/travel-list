@@ -8,7 +8,9 @@ function Item({ item, onToggleItem, onDeleteItem }) {
           onToggleItem(item.id);
         }}
       />
-      <span>{item.description}</span>
+      <span style={item.packed ? { textDecoration: "line-through" } : {}}>
+        {item.quantity} {item.description}
+      </span>
       <button onClick={() => onDeleteItem(item.id)}>❌</button>
     </li>
   );
